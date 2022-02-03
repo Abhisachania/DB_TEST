@@ -11,7 +11,7 @@
      <link rel="shortcut icon" href="{{ url_for('static', filename='diabetes-favicon.png') }}">
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
     
-    <title>Diabetes-preditor-system</title>
+    <title>Diabetes Preditor System</title>
   </head>
   
 
@@ -25,7 +25,7 @@
 <SECTION ID="navbar">
     <nav class="justify-content-center navbar navbar-dark bg-primary">
 
-      <span class="navbar-brand mb-0 h1">Diabetes-preditor-system</span>
+      <span class="navbar-brand mb-0 h1">Diabetes-Preditor System</span>
       <ul class="navbar-nav flex-row">
             
             <li class="nav-item"><a class="nav-link px-2" href="#"><i class="fab fa-twitter"></i></a></li>
@@ -37,36 +37,37 @@
     </nav>
   </SECTION>
 
-<body style="background-color:lightgreen;">
+<body style="background-color:orange;">
    <!-- description -->
-<SECTION ID="form">
 
   <div class='description'>
     <div style ="text-align:center ">
 
-<p class="text-success">Machine Learning Web Application that predicits chances of having heart Disease or not,(Note:This model is 80.00% accurate)</p><br>
+<p class="text-primary">Machine Learning Web Application that predicits chances of having heart Disease or not,(Note:This model is 80.00% accurate)
+</p><br>
     
     </div>
     </div>
 
-		<!-- Result -->
-		<div class="results">
-			{% if prediction==1 %}
-				<h1>Prediction: <span class='danger'>Oops! You have DIABETES.</span></h1>
-				<img class="gif" src="{{ url_for('static', filename='diabetes.jpg') }}" alt="Diabetes Image">
-			{% elif prediction==0 %}
-				<h1>Prediction: <span class='safe'>Great! You DON'T have diabetes.</span></h1>
-				<img class="gif1" src="{{ url_for('static', filename='no diabetes.jpg') }}" alt="Not Diabetes Image">
-			{% endif %}
-		</div>
+	
+    <!-- Result -->
+    <div class="results">
+      {% if prediction==1 %}
+        <h1>Prediction: <span class='danger'>Oops! You have DIABETES.</span></h1>
+        <img src="img_Y.jpg" alt="Diabetes Image">
+      {% elif prediction==0 %}
+        <h1>Prediction: <span class='safe'>Great! You DON'T have diabetes.</span></h1>
+        <img src="img_N.jpg" alt="No Diabetes Image">
+      {% endif %}
+    </div>
 
   
 <!-- Footer -->
 <footer>
 
   <!-- Copyright -->
- <div class="footer-copyright text-center py-3" style="background-color:white;">© This Project is this project development by Abhijit V Sachania
-    
+ <div class="footer-copyright text-center py-3" style="background-color:white;">© This Project is this project development by Abhijit V Sachania <br>    @abhisachania@gmail.com
+
   </div>
   
   <!-- Copyright -->
