@@ -53,10 +53,10 @@
     <div class="results">
 			{% if prediction==1 %}
 				<h1>Prediction: <span class='danger'>Oops! You have DIABETES consult your doctor.</span></h1>
-				<img class="gif" src="{{ url_for('static', filename='Y.jpg') }}" alt="Diabetes Image">
+				
 			{% elif prediction==0 %}
 				<h1>Prediction: <span class='safe'>Great! You DON'T have diabetes.</span></h1>
-				<img class="gif1" src="{{ url_for('static', filename='n.jpg') }}" alt="Not Diabetes Image">
+			
 			{% endif %}
 		</div>
 
