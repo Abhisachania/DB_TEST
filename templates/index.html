@@ -1,9 +1,8 @@
 <!DOCTYPE html>
 
-<html>
   <head>
   <!-- Bootstrap CSS -->
-    
+   
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
@@ -13,22 +12,18 @@
 
 
 
-
-
-
- <!-- main css and favicon-->
+     <!-- main css and favicon-->
      <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
       <!-- main css -->
      <link rel="shortcut icon" href="{{ url_for('static', filename='diabetes-favicon.png') }}">    
     <!-- main css and favicon-->
-    
-    <title>Diabetes Preditor System</title>
+    <title>Diabetes-Preditor-System</title>
   </head>
   
 
   
 
-  
+ 
 
     
     <!-- Navbar-->
@@ -48,8 +43,12 @@
     </nav>
   </SECTION>
 
-<body style="background-color:#ffff99;">
-   <!-- description -->
+<body style="background-color:#f5f50d;">
+
+
+
+  <!-- description -->
+
 
   <div class='description'>
     <div style ="text-align:center ">
@@ -58,26 +57,39 @@
     
     </div>
     </div>
+ 
 
-	
-    <div class="results">
-			{% if prediction==1 %}
-				<h1>Prediction: <span class='danger'>Oops! You have DIABETES consult your doctor.</span></h1>
-				
-			{% elif prediction==0 %}
-				<h1>Prediction: <span class='safe'>Great! You DON'T have diabetes.</span></h1>
-			
-			{% endif %}
-		</div>
+        <!-- Text Area -->
+        <div style ="text-align:center">
+    	<div class="container-fluid">
+            
+    		<form action="{{ url_for('predict') }}" method="POST">
+                <input class="form-input" type="text" name="pregnancies" placeholder="No.of Pregnancies eg.0"><br>
+                <input class="form-input" type="text" name="glucose" placeholder="Glucose (mg/dL) eg. 80"><br>
+                <input class="form-input" type="text" name="bloodpressure" placeholder="B.P (mmHg)eg.80"><br>
+                <input class="form-input" type="text" name="skinthickness" placeholder="Skin Thickness(mm)eg. 20"><br>
+                <input class="form-input" type="text" name="insulin" placeholder="Insulin Level(IU/mL) eg.80"><br>
+                <input class="form-input" type="text" name="bmi" placeholder="B.M.I (kg/m²) eg.23.1"><br>
+                <input class="form-input" type="text" name="dpf" placeholder="D.P.F eg.0.52"><br>
+                <input class="form-input" type="text" name="age" placeholder="Age (years) eg.24"><br>
 
-  
+        			<input type="submit" class="btn btn-primary my-cta-button" value="Predict">
+              <input type="reset" class="btn btn-danger" value="Reset">
+        	</form>
+    	</div>
+    </div>
+        <!-- Footer -->
+       <div class='footer'>
+
+           </div>
+           
 <!-- Footer -->
 <footer>
 
   <!-- Copyright -->
- <div class="footer-copyright text-center py-3" style="background-color:#0dc2f7;">© This Project is this project development by Abhijit V Sachania <br>    @abhisachania@gmail.com
-
-	</div>
+ <div class="footer-copyright text-center py-3" style="background-color:#00ffcc;">© This Project is this project development by Abhijit V Sachania <br>    @abhisachania@gmail.com
+    
+  </div>
   
   <!-- Copyright -->
 
@@ -85,5 +97,5 @@
 <!-- Footer -->
   
 
-    </body>
+</body>
 </html>
