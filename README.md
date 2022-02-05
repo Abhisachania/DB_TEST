@@ -8,4 +8,6 @@ By using the statistical data about how certain aspects like BMI, Glucose level,
 
 This project development by abhijit v sachania for Microsoft Future Talent Ready
 
-project link https://github.com/Abhisachania/DB_TEST
+project link       https://github.com/Abhisachania/DB_TEST
+
+azure web link     https://db2022.azurewebsites.net
